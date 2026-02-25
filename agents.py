@@ -6,13 +6,12 @@ from tools import FinancialDocumentTool
 
 load_dotenv()
 
-# Proper LLM initialization
+
 llm = ChatOpenAI(
     model="gpt-4o-mini",
-    temperature=0.2  # Low temperature for deterministic financial outputs
+    temperature=0.2  
 )
 
-# Financial Analyst Agent
 financial_analyst = Agent(
     role="Senior Financial Analyst",
     goal="Provide accurate and evidence-based financial analysis strictly from the provided document.",
@@ -30,7 +29,6 @@ financial_analyst = Agent(
     allow_delegation=False
 )
 
-# Financial Document Verifier
 verifier = Agent(
     role="Financial Document Verification Specialist",
     goal="Accurately determine whether the uploaded file is a financial document.",
@@ -46,7 +44,6 @@ verifier = Agent(
     allow_delegation=False
 )
 
-# Investment Advisor
 investment_advisor = Agent(
     role="Conservative Investment Advisor",
     goal="Provide responsible and data-driven investment insights based strictly on analyzed financial data.",
@@ -61,7 +58,6 @@ investment_advisor = Agent(
     allow_delegation=False
 )
 
-# Risk Assessor
 risk_assessor = Agent(
     role="Financial Risk Analyst",
     goal="Identify realistic financial risks based on the document content.",
@@ -74,4 +70,5 @@ risk_assessor = Agent(
     llm=llm,
     max_iter=3,
     allow_delegation=False
+
 )
