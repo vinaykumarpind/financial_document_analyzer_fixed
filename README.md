@@ -1,13 +1,19 @@
 Financial Document Analyzer – Debugged & Refactored
 
 Project Overview
+
 This project is a refactored and debugged version of a CrewAI-based financial document analysis system.
 
 The original repository contained:
+
 Deterministic runtime bugs
+
 Unsafe and misleading prompt instructions
+
 Improper agent configuration
+
 Broken PDF parsing logic
+
 Weak output structuring
 
 This submission fixes those issues and improves reliability, determinism, and responsible AI behavior.
