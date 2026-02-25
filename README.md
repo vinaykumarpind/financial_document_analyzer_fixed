@@ -65,7 +65,6 @@ Replaced with PyPDFLoader from langchain-community for reliable document parsing
 Removed unnecessary async usage and unused imports to ensure cleaner execution flow.
 
 Prompt Engineering Improvements
-
 The original prompts intentionally instructed the model to:
 Fabricate financial advice ,
 Generate fake URLs ,
@@ -75,7 +74,6 @@ Ignore user queries ,
 Provide unsafe investment recommendations.
 
 These were replaced with: 
-
 Evidence-based financial analysis ,
 Strict reliance on document content ,
 Structured JSON output format ,
