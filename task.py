@@ -2,6 +2,7 @@ from crewai import Task
 from agents import financial_analyst
 from tools import FinancialDocumentTool
 
+# Main Financial Analysis Task
 analyze_financial_document = Task(
     description="""
     Analyze the financial document located at {file_path}.
@@ -35,4 +36,6 @@ analyze_financial_document = Task(
     agent=financial_analyst,
     tools=[FinancialDocumentTool.read_data_tool],
     async_execution=False,
+)
+
 )
